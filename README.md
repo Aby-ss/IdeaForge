@@ -45,9 +45,5 @@ We welcome contributions from the community! To contribute to IdeaForge:
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Contact
-
-Have questions or feedback? Reach out to our team at contact@ideaforge.com or visit our website [www.ideaforge.com](https://www.ideaforge.com).
-
 ---
 Empower innovation with IdeaForge – your strategic partner in turning ideas into success stories!
