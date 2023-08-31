@@ -71,6 +71,20 @@ class Footer:
         grid.add_row("[b]Empower innovation with IdeaForge[/]")
         return Panel(grid, style="white on black", box=box.SQUARE)
 
+def Serpwow_trends():
+    # set up the request parameters
+    params = {
+    'api_key': '098DE11908BF480FBE85735565EEB280',
+      'engine': 'google',
+      'search_type': 'trends',
+      'q': 'Abdulrehman'
+    }
+    
+    # make the http GET request to SerpWow
+    api_result = requests.get('https://api.serpwow.com/search', params)
+    
+    # print the JSON response from SerpWow
+    print(json.dumps(api_result.json()))
 
 layout["Header"].update(Header())
 layout["Footer"].update(Footer())
