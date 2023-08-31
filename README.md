@@ -1,5 +1,6 @@
 # IdeaForge: Innovation Catalyst Suite
 
+[![wakatime](https://wakatime.com/badge/user/04c60a11-7fcd-4d1d-accf-a4bb74ceedec/project/23a91d4d-8885-44b9-b9e6-f53f1c13f1ce.svg)](https://wakatime.com/badge/user/04c60a11-7fcd-4d1d-accf-a4bb74ceedec/project/23a91d4d-8885-44b9-b9e6-f53f1c13f1ce)
 
 **Welcome to IdeaForge, your ultimate innovation companion! Transform ideas into reality with our comprehensive Software-as-a-Service (SaaS) suite designed to streamline every step of the product ideation journey.**
 
