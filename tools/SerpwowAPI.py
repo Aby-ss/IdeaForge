@@ -1,6 +1,9 @@
 import json
 import requests
 
+from rich.traceback import install
+install(show_locals=True)
+
 # set up the request parameters
 params = {
 'api_key': '098DE11908BF480FBE85735565EEB280',
