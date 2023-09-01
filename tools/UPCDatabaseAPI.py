@@ -1,5 +1,7 @@
 import requests
 from rich.panel import Panel
+from rich.traceback import install
+install(show_locals=True)
 
 # UPC API Base URL
 UPC_API_BASE_URL = "https://api.upcdatabase.org/product/"
