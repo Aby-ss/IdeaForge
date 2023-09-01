@@ -1,25 +1,47 @@
 import requests
 
-# Replace with your actual Shopify store domain and API key
-SHOP_DOMAIN = 'your-shop-name.myshopify.com'
-API_KEY = 'your-api-key'
-API_PASSWORD = 'your-api-password'
+# Replace with your Shopify store's API credentials
+API_KEY = 'YOUR_API_KEY'
+PASSWORD = 'YOUR_PASSWORD'
+SHOP_URL = 'YOUR_SHOPIFY_STORE_URL'
+API_VERSION = '2021-10'
 
-def get_shop_info():
-    url = f'https://{SHOP_DOMAIN}/admin/api/2021-07/shop.json'
-    response = requests.get(url, auth=(API_KEY, API_PASSWORD))
-    data = response.json()
-    return data['shop']
+# Authenticate with Shopify API
+auth = (API_KEY, PASSWORD)
 
-def get_orders():
-    url = f'https://{SHOP_DOMAIN}/admin/api/2021-07/orders.json'
-    response = requests.get(url, auth=(API_KEY, API_PASSWORD))
-    data = response.json()
-    return data['orders']
+# Function to fetch data from Shopify API
+def fetch_shopify_data(endpoint):
+    url = f'https://{SHOP_URL}/admin/api/{API_VERSION}/{endpoint}.json'
+    response = requests.get(url, auth=auth)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f'Error fetching data from {url}: {response.status_code}')
+        return None
 
-# Example usage
-shop_info = get_shop_info()
-print("Shop Information:", shop_info)
+# Function to gather store information
+def get_store_info():
+    shop_info = fetch_shopify_data('shop')
+    if shop_info:
+        print(f"Store Name: {shop_info['shop']['name']}")
+        print(f"Email: {shop_info['shop']['email']}")
+        print(f"Domain: {shop_info['shop']['domain']}")
+        # Add more store details as needed
 
-orders = get_orders()
-print("Orders:", orders)
+# Function to gather product information
+def get_product_info():
+    products = fetch_shopify_data('products')
+    if products:
+        for product in products['products']:
+            print(f"Product Name: {product['title']}")
+            print(f"Description: {product['body_html']}")
+            print(f"Price: {product['variants'][0]['price']}")
+            # Add more product details as needed
+
+# Main function
+def main():
+    print("Fetching Store Information:")
+    get_store_info()
+
+    print("\nFetching Product Information:")
+    get_product_info()
