@@ -85,6 +85,30 @@ def Serpwow_trends():
     
     # print the JSON response from SerpWow
     print(json.dumps(api_result.json()))
+    
+def get_trends(keywords, timeframe='today 5-y', geo='US'):
+    pytrends = TrendReq(hl='en-US', tz=360)
+    pytrends.build_payload(keywords, cat=0, timeframe=timeframe, geo=geo)
+    interest_over_time_df = pytrends.interest_over_time()
+    return interest_over_time_df
+
+def plot_trends(data, title):
+    plt.figure(figsize=(10, 6))
+    for keyword in data.columns:
+        plt.plot(data.index, data[keyword], label=keyword)
+    plt.xlabel('Date')
+    plt.ylabel('Interest Over Time')
+    plt.title(title)
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+def plot_ascii_trends(data, title):
+    for keyword in data.columns:
+        chart = asciichartpy.plot(data[keyword], {'width': 5,'height': 10, 'colors': [asciichartpy.blue]})
+        print(f"Keyword: {keyword}\n")
+        print(chart)
+        print("\n")
 
 layout["Header"].update(Header())
 layout["Footer"].update(Footer())
