@@ -1,12 +1,12 @@
 body {
-    transform: scale(0.65);
-    transform-origin: top left;
-    width: 153.846%; /* (1 / 0.75) = 133.33% to maintain original content size */
-    margin: 0;
-    font-family: 'Koulen', sans-serif;
-    color: #000000;
-    background: #1A222B;
-    overflow-x: hidden;
+  transform: scale(0.65);
+  transform-origin: top left;
+  width: 153.846%; /* (1 / 0.75) = 133.33% to maintain original content size */
+  margin: 0;
+  font-family: 'Koulen', sans-serif;
+  color: #000000;
+  background: #1A222B;
+  overflow-x: hidden;
   }
         
   h1 {
@@ -34,6 +34,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    color: aliceblue;
     align-items: center;
     min-height: 450px;
     padding-top: 100px;
