@@ -1,0 +1,41 @@
+body {
+    transform: scale(0.65);
+    transform-origin: top left;
+    width: 153.846%; /* (1 / 0.75) = 133.33% to maintain original content size */
+    margin: 0;
+    font-family: 'Koulen', sans-serif;
+    color: #000000;
+    background: #1A222B;
+    overflow-x: hidden;
+  }
+        
+  h1 {
+    font-size: 4rem;
+    text-align: center; /* Center align the heading */
+    max-width: 800px; /* Limit the maximum width of the heading */
+    margin: 0 auto; /* Center the heading horizontally */
+    max-width: 100%;
+  }
+  
+  h3 {
+    align-self: center;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    font-family: 'Koulen', cursive;
+    text-align: left; /* Center align the paragraphs */
+    max-width: 1200px; /* Limit the maximum width of the paragraphs */
+    margin: 0 auto; /* Center the paragraphs horizontally */
+  }
+  
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 450px;
+    padding-top: 100px;
+    margin-top: 250px;
+  }
