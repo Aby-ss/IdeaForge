@@ -7,7 +7,7 @@ install(show_locals=True)
 UPC_API_BASE_URL = "https://api.upcdatabase.org/product/"
 
 # Replace 'YOUR_API_KEY' with your actual API key (if required)
-API_KEY = 'YOUR_API_KEY'
+API_KEY = 'CF459CF8D921A528FC11B789FBDB41C0'
 
 # Function to fetch product information using UPC code
 def get_product_info(upc_code):
